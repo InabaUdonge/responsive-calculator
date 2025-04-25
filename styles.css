@@ -1,0 +1,126 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.calculadora {
+  width: 100%;
+  max-width: 320px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#pantalla {
+  width: 100%;
+  height: 50px;
+  font-size: 1.8rem;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  text-align: right;
+  border: none;
+  border-radius: 8px;
+  background-color: #eaeaea;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2d89ef;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #1b5fbf;
+}
+
+.operador {
+  background-color: #f57c00;
+}
+
+.operador:hover {
+  background-color: #e65100;
+}
+
+#limpiar {
+  background-color: #d32f2f;
+}
+
+#limpiar:hover {
+  background-color: #b71c1c;
+}
+
+#modoOscuroToggle {
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .calculadora {
+  background-color: #1e1e1e;
+}
+
+body.dark #pantalla {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  .calculadora {
+    max-width: 400px;
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #pantalla {
+    height: 60px;
+    font-size: 2.2rem;
+    padding: 12px;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+
+  #modoOscuroToggle {
+    font-size: 1.1rem;
+  }
+}
